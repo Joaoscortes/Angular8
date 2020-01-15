@@ -1,1 +1,31 @@
-<p>products works!</p>
+<p><button class="btn btn-primary" (click)=updateData()>Update Data</button></p>
+<p *ngFor="let product of products$ | async">ID: {{product.id}} , PVP: {{product.pvp}}, IVA: {{product.iva}} , DISCOUNT:
+  {{product.discount}}
+</p>
+
+<div>
+  <input type="number" placeholder="pvp" [(ngModel)]="product.pvp">
+  <input type="number" placeholder="iva" [(ngModel)]="product.iva">
+  <input type="number" placeholder="discount" [(ngModel)]="product.discount">
+  <button class="btn btn-success" (click)=create()>Create</button>
+  <span>{{msgNew}}</span>
+</div>
+
+
+<div>
+  <select [(ngModel)]="productId" class="w-25">
+    <option *ngFor="let prod of (products$ | async)" [ngValue]="prod.id">{{prod.id}}</option>
+  </select>
+  <button class="btn btn-info" (click)=getById()>Get by Id</button>
+  <button class="btn btn-danger" (click)=delete()>Delete by Id</button>
+  <span>{{msgById}}</span>
+</div>
+
+<div>
+  <input type="number" placeholder="id" disabled [(ngModel)]="productselected.id">
+  <input type="number" placeholder="pvp" [(ngModel)]="productselected.pvp">
+  <input type="number" placeholder="iva" [(ngModel)]="productselected.iva">
+  <input type="number" placeholder="discount" [(ngModel)]="productselected.discount">
+  <button class="btn btn-primary" (click)=update()>Update product</button>
+  <span>{{msgUpdate}}</span>
+</div>

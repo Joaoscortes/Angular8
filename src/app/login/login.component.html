@@ -1,1 +1,5 @@
-<p>login works!</p>
+<p class="bg-danger">login works!</p>
+<input [(ngModel)]="account.email" type="email" placeholder="email" />
+<input [(ngModel)]="account.password" type="password" placeholder="password" />
+
+<button (click)="login()">Log In</button>
