@@ -9,6 +9,7 @@ import { AccountServiceService } from 'src/app/core/services/account-service/acc
 export class HeaderComponent implements OnInit {
 
   public name: string;
+  public isCollapsed = false;
 
   constructor(
     private accountService: AccountServiceService

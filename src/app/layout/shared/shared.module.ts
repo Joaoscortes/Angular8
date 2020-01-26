@@ -8,10 +8,12 @@ import { ProductService } from './services/product/product.service';
 import { DataService } from './services/data/data.service';
 
 import { HeaderComponent } from './components/header/header.component';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    SideBarComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,8 @@ import { HeaderComponent } from './components/header/header.component';
   exports: [
     CommonModule,
     FormsModule,
-    HeaderComponent
+    HeaderComponent,
+    SideBarComponent
   ],
   providers: [
     ProductService,

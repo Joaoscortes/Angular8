@@ -11,7 +11,7 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       {
-        path: '',
+        path: 'home',
         component: MainComponent
       },
       {
@@ -21,6 +21,9 @@ const routes: Routes = [
       {
         path: 'shelves',
         component: ShelvesComponent
+      },
+      {
+        path: '', redirectTo: 'home'
       }
     ]
   }

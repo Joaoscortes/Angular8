@@ -1,0 +1,8 @@
+#sidebar {
+  color: #fff;
+  padding-left: 0.5rem;
+
+  a.active {
+    border-right: 10px solid green;
+  }
+}
