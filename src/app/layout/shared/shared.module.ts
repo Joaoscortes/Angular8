@@ -9,11 +9,13 @@ import { DataService } from './services/data/data.service';
 
 import { HeaderComponent } from './components/header/header.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    SideBarComponent
+    SideBarComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +26,8 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
     CommonModule,
     FormsModule,
     HeaderComponent,
-    SideBarComponent
+    SideBarComponent,
+    FooterComponent
   ],
   providers: [
     ProductService,

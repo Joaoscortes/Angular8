@@ -1,5 +1,19 @@
-<p class="bg-danger">login works!</p>
-<input [(ngModel)]="account.email" type="email" placeholder="email" />
-<input [(ngModel)]="account.password" type="password" placeholder="password" />
+<div class="login">
+  <div class="wrapper">
+    <a href="https://www.upacademy.pt/" target="_blank">
+      <img src="https://www.upacademy.pt/media/UP-Academy-Logo-Retina-Website.png" class="w-100 pb-3" />
+    </a>
+    <form role="form">
+      <div class="form-content">
+        <div class="form-group">
+          <input class="w-100" name="email" type="email" [(ngModel)]="account.email" placeholder="email" />
+        </div>
 
-<button (click)="login()">Log In</button>
+        <div class="form-group">
+          <input class="w-100" name="password" type="password" [(ngModel)]="account.password" placeholder="password" />
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary w-100" (click)="login()"> Log in </button>
+    </form>
+  </div>
+</div>

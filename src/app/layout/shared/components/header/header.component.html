@@ -1,19 +1,19 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-  <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed">
+  <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed">
     <span class="navbar-toggler-icon"></span>
   </button>
   <a class="navbar-brand">UpAcademy</a>
 
-  <div class="collapse navbar-collapse" id="navbarHeader" [ngClass]="{ 'show': isCollapsed }">
+  <div class="collapse navbar-collapse" id="navbarHeader" [ngClass]="{ 'show': !isCollapsed }">
     <ul class="navbar-nav mr-auto mt-2 mt-sm-0">
       <li class="nav-item">
-        <a class="nav-link" [routerLinkActive]="['active']" routerLink="/home">Main</a>
+        <a class="nav-link" [routerLinkActive]="['active']" routerLink="/home" (click)="collapse()">Main</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLinkActive]="['active']" routerLink="/products">Products</a>
+        <a class="nav-link" [routerLinkActive]="['active']" routerLink="/products" (click)="collapse()">Products</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLinkActive]="['active']" routerLink="/shelves">Shelves</a>
+        <a class="nav-link" [routerLinkActive]="['active']" routerLink="/shelves" (click)="collapse()">Shelves</a>
       </li>
     </ul>
     <span class="navbar-text">
