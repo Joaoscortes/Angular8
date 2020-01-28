@@ -1,1 +1,14 @@
-<p>main works!</p>
+<div>
+  Male
+  <input type="radio" [(ngModel)]="value" name="gender" value="m" />
+</div>
+<div>
+  Female
+  <input type="radio" [(ngModel)]="value" name="gender" value="f" />
+</div>
+<div>
+  Other
+  <input type="radio" [(ngModel)]="value" name="gender" value="o" />
+</div>
+<button (click)="showValue()">Show radio value</button>
+{{value}}

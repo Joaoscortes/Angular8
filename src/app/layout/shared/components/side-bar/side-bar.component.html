@@ -7,24 +7,43 @@
     <p class="shrink">Dummy Heading</p>
     <li class="nav-item nav-menu">
       <a class="nav-link" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
-        [ngClass]="{ 'active': isCollapsed }">Menu</a>
+        [ngClass]="{ 'active': isCollapsed }">
+        <fa-icon [icon]="faFolderPlus" *ngIf="!isCollapsed"></fa-icon>
+        <fa-icon [icon]="faFolderMinus" *ngIf="isCollapsed"></fa-icon>
+        <span class="shrink pl-3">Menu</span>
+      </a>
       <ul class="collapse list-unstyled" [ngClass]="{ 'show': isCollapsed }">
         <li class="nav-item">
-          <a class="nav-link" [routerLinkActive]="['active']" routerLink="/products">Products1</a>
+          <a class="nav-link" [routerLinkActive]="['active']" routerLink="/products">
+            <fa-icon [icon]="faBeer" *ngIf="isCollapsed"></fa-icon>
+            <span class="shrink pl-3">Products in menu</span>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLinkActive]="['active']" routerLink="/shelves">Shelves1</a>
+          <a class="nav-link" [routerLinkActive]="['active']" routerLink="/shelves">
+            <fa-icon [icon]="faStore" *ngIf="isCollapsed"></fa-icon>
+            <span class="shrink pl-3">Shelves in menu</span>
+          </a>
         </li>
       </ul>
     </li>
     <li class="nav-item">
-      <a class="nav-link" [routerLinkActive]="['active']" routerLink="/home">Main</a>
+      <a class="nav-link" [routerLinkActive]="['active']" routerLink="/home">
+        <fa-icon [icon]="faHome"></fa-icon>
+        <span class="shrink pl-3">Main</span>
+      </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" [routerLinkActive]="['active']" routerLink="/products">Products</a>
+      <a class="nav-link" [routerLinkActive]="['active']" routerLink="/products">
+        <fa-icon [icon]="faBeer"></fa-icon>
+        <span class="shrink pl-3">Products</span>
+      </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" [routerLinkActive]="['active']" routerLink="/shelves">Shelves</a>
+      <a class="nav-link" [routerLinkActive]="['active']" routerLink="/shelves">
+        <fa-icon [icon]="faStore"></fa-icon>
+        <span class="shrink pl-3">Shelves</span>
+      </a>
     </li>
   </ul>
 </nav>

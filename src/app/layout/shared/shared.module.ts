@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { ProductService } from './services/product/product.service';
 import { DataService } from './services/data/data.service';
@@ -20,11 +21,13 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     CommonModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    FontAwesomeModule
   ],
   exports: [
     CommonModule,
     FormsModule,
+    FontAwesomeModule,
     HeaderComponent,
     SideBarComponent,
     FooterComponent

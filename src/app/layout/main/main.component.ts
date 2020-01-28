@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
+  value: string;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  showValue() {
+    console.log(this.value);
+  }
 }
