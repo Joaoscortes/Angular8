@@ -8,8 +8,7 @@
     <li class="nav-item nav-menu">
       <a class="nav-link" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
         [ngClass]="{ 'active': isCollapsed }">
-        <fa-icon [icon]="faFolderPlus" *ngIf="!isCollapsed"></fa-icon>
-        <fa-icon [icon]="faFolderMinus" *ngIf="isCollapsed"></fa-icon>
+        <fa-icon [icon]="isCollapsed?faFolderMinus:faFolderPlus"></fa-icon>
         <span class="shrink pl-3">Menu</span>
       </a>
       <ul class="collapse list-unstyled" [ngClass]="{ 'show': isCollapsed }">
