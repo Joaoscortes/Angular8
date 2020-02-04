@@ -11,12 +11,16 @@ import { DataService } from './services/data/data.service';
 import { HeaderComponent } from './components/header/header.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BarChartComponent } from './components/barChart/barChart.component';
+import { PieChartComponent } from './components/pie-chart/pie-chart.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     SideBarComponent,
-    FooterComponent
+    FooterComponent,
+    BarChartComponent,
+    PieChartComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +34,9 @@ import { FooterComponent } from './components/footer/footer.component';
     FontAwesomeModule,
     HeaderComponent,
     SideBarComponent,
-    FooterComponent
+    FooterComponent,
+    BarChartComponent,
+    PieChartComponent
   ],
   providers: [
     ProductService,

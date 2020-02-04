@@ -1,14 +1,7 @@
-<div>
-  Male
-  <input type="radio" [(ngModel)]="value" name="gender" value="m" />
+<div class="d3BarChart">
+  <app-bar-chart *ngIf="chartData" [data]="chartData"></app-bar-chart>
 </div>
-<div>
-  Female
-  <input type="radio" [(ngModel)]="value" name="gender" value="f" />
+
+<div class="d3BarChart">
+  <app-pie-chart *ngIf="chartData"></app-pie-chart>
 </div>
-<div>
-  Other
-  <input type="radio" [(ngModel)]="value" name="gender" value="o" />
-</div>
-<button (click)="showValue()">Show radio value</button>
-{{value}}
