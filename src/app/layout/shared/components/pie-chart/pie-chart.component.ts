@@ -6,24 +6,33 @@ import * as d3 from 'd3';
   templateUrl: './pie-chart.component.html',
   styleUrls: ['./pie-chart.component.scss']
 })
-export class PieChartComponent implements OnInit {
+export class PieChartComponent implements OnInit, OnChanges {
 
   @ViewChild('chart', { static: true }) private chartContainer: ElementRef<HTMLElement>;
-  public data: any = { fail: 2, notfinish: 4, pass: 9 };
+  @Input() private data: any;
   private margin: any = { top: 20, bottom: 20, left: 20, right: 20 };
+  private pie: any;
+  private svg: any;
   private width = 400;
   private height = 400;
 
   private radius: any;
-  private svg: any;
   private color: any;
-  private pie: any;
   private dataReady: any;
 
   constructor() { }
 
   ngOnInit() {
     this.draw();
+    if (this.data) {
+      this.updateChart();
+    }
+  }
+
+  ngOnChanges() {
+    if (this.pie) {
+      this.updateChart();
+    }
   }
 
   draw() {
@@ -35,14 +44,16 @@ export class PieChartComponent implements OnInit {
       .attr('width', this.width)
       .attr('height', this.height)
       .append('g')
+      .attr('class', 'paths')
       .attr('transform', 'translate(' + this.width / 2 + ',' +
         this.height / 2 + ')');
+  }
 
+  updateChart() {
     this.color = d3.scaleOrdinal()
       .domain(this.data)
       .range(['red', 'blue', 'green']);
 
-    // Compute the position of each group on the pie:
     this.pie = d3.pie()
       .value((d: any) => d.value);
 

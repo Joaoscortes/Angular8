@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
   chartData: Array<any>;
+  pieData: any;
   value: string;
 
   constructor() { }
@@ -21,10 +22,6 @@ export class MainComponent implements OnInit {
     }, 1000);
   }
 
-  showValue() {
-    console.log(this.value);
-  }
-
   generateData() {
     this.chartData = [];
     for (let i = 0; i < (8 + Math.floor(Math.random() * 10)); i++) {
@@ -33,5 +30,10 @@ export class MainComponent implements OnInit {
         Math.floor(Math.random() * 100)
       ]);
     }
+    this.pieData = {
+      fail: Math.floor(Math.random() * 10),
+      notfinish: Math.floor(Math.random() * 10),
+      pass: Math.floor(Math.random() * 10)
+    };
   }
 }

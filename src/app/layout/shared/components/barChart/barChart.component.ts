@@ -14,6 +14,7 @@ export class BarChartComponent implements OnInit, OnChanges {
   private chart: any;
   private width: number;
   private height: number;
+
   private xScale: any;
   private yScale: any;
   private colors: any;
