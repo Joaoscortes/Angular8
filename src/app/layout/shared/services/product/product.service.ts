@@ -7,14 +7,14 @@ import { Product } from 'src/app/core/models/product';
 })
 export class ProductService {
 
-  private url = 'http://localhost:8080/stock/products/';
+  private url = 'http://localhost:8080/stockAngular/products/';
 
   constructor(
     private http: HttpClient
   ) { }
 
   public getAll() {
-    return this.http.get(this.url);
+    return this.http.get(this.url + 'all');
   }
 
   public getById(id: number) {

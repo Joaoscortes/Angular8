@@ -4,6 +4,7 @@ import { LayoutComponent } from './layout.component';
 import { MainComponent } from './main/main.component';
 import { ProductsComponent } from './products/products.component';
 import { ShelvesComponent } from './shelves/shelves.component';
+import { PdfComponent } from './pdf/pdf.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
       {
         path: 'shelves',
         component: ShelvesComponent
+      },
+      {
+        path: 'pdfexample',
+        component: PdfComponent
       },
       {
         path: '', redirectTo: 'home'

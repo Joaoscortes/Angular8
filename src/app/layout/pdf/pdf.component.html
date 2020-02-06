@@ -1,0 +1,59 @@
+<div class="pdfbuttons">
+  <button class="btn" (click)="generatePdf()">
+    <fa-icon [icon]="faFilePdf" size="2x" [styles]="{'stroke': 'red', 'color': 'red'}"></fa-icon>
+  </button>
+</div>
+<div id="capture">
+  <!--The content below is only a placeholder and can be replaced.-->
+  <div style="text-align:center; padding-bottom: 1rem;">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+    <pre>
+      npm install --save pdfmake
+      npm install --save-dev @types/pdfmake
+
+      /*     optional     */
+      /*     html -> img -> pdf     */
+      npm install --save html2canvas
+      
+    </pre>
+    <img width="300" alt="UPAcademyLogo Logo" src="assets/UPAcademyLogo.png">
+  </div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="border-center">
+    Create dummy data pdf
+    <button class="btn" (click)="generatePdfTableData()">
+      <fa-icon [icon]="faFilePdf" size="2x" [styles]="{'stroke': 'red', 'color': 'red'}"></fa-icon>
+    </button>
+  </div>
+</div>

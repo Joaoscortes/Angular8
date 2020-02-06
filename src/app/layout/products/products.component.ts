@@ -3,12 +3,17 @@ import { DataService } from '../shared/services/data/data.service';
 import { ReplaySubject } from 'rxjs';
 import { Product } from 'src/app/core/models/product';
 
+import { faRedo, faPlus } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
+  faRedo = faRedo;
+  faPlus = faPlus;
+
   public products$: ReplaySubject<any[]>;
 
   public product = new Product();
