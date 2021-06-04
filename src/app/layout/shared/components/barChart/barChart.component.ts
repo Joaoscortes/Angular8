@@ -8,18 +8,18 @@ import * as d3 from 'd3';
 })
 export class BarChartComponent implements OnInit, OnChanges {
 
-  @ViewChild('chart', { static: true }) private chartContainer: ElementRef<HTMLElement>;
-  @Input() private data: Array<any>;
-  private margin: any = { top: 20, bottom: 20, left: 20, right: 20 };
-  private chart: any;
-  private width: number;
-  private height: number;
+  @ViewChild('chart', { static: true }) public chartContainer: ElementRef<HTMLElement>;
+  @Input() public data: Array<any>;
+  public margin: any = { top: 20, bottom: 20, left: 20, right: 20 };
+  public chart: any;
+  public width: number;
+  public height: number;
 
-  private xScale: any;
-  private yScale: any;
-  private colors: any;
-  private xAxis: any;
-  private yAxis: any;
+  public xScale: any;
+  public yScale: any;
+  public colors: any;
+  public xAxis: any;
+  public yAxis: any;
 
   constructor() { }
 

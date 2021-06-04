@@ -8,17 +8,17 @@ import * as d3 from 'd3';
 })
 export class PieChartComponent implements OnInit, OnChanges {
 
-  @ViewChild('chart', { static: true }) private chartContainer: ElementRef<HTMLElement>;
-  @Input() private data: any;
-  private margin: any = { top: 20, bottom: 20, left: 20, right: 20 };
-  private pie: any;
-  private svg: any;
-  private width = 400;
-  private height = 400;
+  @ViewChild('chart', { static: true }) public chartContainer: ElementRef<HTMLElement>;
+  @Input() public data: any;
+  public margin: any = { top: 20, bottom: 20, left: 20, right: 20 };
+  public pie: any;
+  public svg: any;
+  public width = 400;
+  public height = 400;
 
-  private radius: any;
-  private color: any;
-  private dataReady: any;
+  public radius: any;
+  public color: any;
+  public dataReady: any;
 
   constructor() { }
 
